@@ -3,9 +3,19 @@
     padding-right: 20px;
 }
 
+.side-menu-wrapper .side-navbar-nav {
+    padding-bottom: 30px;
+    height: calc(100vh - 163px) !important;
+}
+
 @media (max-width: 575.98px){
 .header-area .header-top .nav-toggle-btn {
     margin-left: 20px;
 }
+.side-menu-wrapper .sidenav-footer .btn{
+    height: 58px;
 }
+}
+
+
 
