@@ -8,6 +8,11 @@
     height: calc(100vh - 142px) !important;
 }
 
+.selected-filters-parent-wrap{
+    margin-top: 24px;
+    margin-bottom: 20px;
+}
+
 .input-style2.focused .placeholder_text {
     transform: translateY(-23px);
     background-color: #F9FAFC;

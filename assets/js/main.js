@@ -3,7 +3,6 @@ const freezeBody = () => {
   const scrollY = document.documentElement.style.getPropertyValue('--scroll-y');
   const body = document.body;
   body.style.position = 'fixed';
-  body.style.overscrollBehavior = 'contain';
   body.style.top = `-${scrollY}`;
   // alert('freeze')
 };
@@ -13,13 +12,8 @@ const unrefreezeBody = () => {
   const body = document.body;
   const scrollY = body.style.top;
   body.style.position = '';
-  body.style.overscrollBehavior = '';
   body.style.top = '';
-  window.scrollTo({
-    top: parseInt(scrollY || '0') * -1,
-    left: 0,
-    behavior: 'auto'
-  });
+  window.scrollTo(0, parseInt(scrollY || '0') * -1);
 }
 
 window.addEventListener('scroll', () => {
