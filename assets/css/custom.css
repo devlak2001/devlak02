@@ -17,5 +17,9 @@
 }
 }
 
+:root {
+    scroll-behavior: unset !important;
+}
+
 
 

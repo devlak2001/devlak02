@@ -15,7 +15,11 @@ const unrefreezeBody = () => {
   body.style.position = '';
   body.style.overscrollBehavior = '';
   body.style.top = '';
-  window.scrollTo(0, parseInt(scrollY || '0') * -1);
+  window.scrollTo({
+    top: parseInt(scrollY || '0') * -1,
+    left: 0,
+    behavior: 'auto'
+  });
 }
 
 window.addEventListener('scroll', () => {
