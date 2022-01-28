@@ -5,8 +5,15 @@
 
 .side-menu-wrapper .side-navbar-nav {
     padding-bottom: 30px;
-    height: calc(100vh - 163px) !important;
+    height: calc(100vh - 142px) !important;
 }
+
+.input-style2.focused .placeholder_text {
+    transform: translateY(-23px);
+    background-color: #F9FAFC;
+    font-size: 10px;
+    color: #743393;
+  }
 
 @media (max-width: 575.98px){
 .header-area .header-top .nav-toggle-btn {
@@ -27,6 +34,10 @@
 
 :root {
     scroll-behavior: unset !important;
+}
+
+.footer-item .footer-link ul li a:hover{
+    font-weight: 600;
 }
 
 
