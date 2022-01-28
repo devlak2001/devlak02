@@ -95,8 +95,10 @@ function InitStoresSlide(){
       // $('body').toggleClass('overflow-hidden');
       if($(this).hasClass('open')){
         document.body.style.overflowY = 'scroll';
+        document.body.classList.toggle('hide-scroll');
       }else {
         document.body.style.overflowY = 'hidden';
+        document.body.classList.toggle('hide-scroll');
       }
     }); 
 
@@ -110,6 +112,7 @@ function InitStoresSlide(){
     $(".side-navbar-nav li .btn-back-icon").on('click', function() {
       $(this).closest('.child-nav-wrapper').removeClass('open')
       document.body.style.overflowY = 'scroll';
+      document.body.classList.toggle('hide-scroll');
     });
 
     $(".body-backdrop").on('click', function() {
@@ -163,6 +166,7 @@ function InitStoresSlide(){
     $('.all-filters-area').addClass('open');
      $(".body-backdrop").addClass('open');
      document.body.style.overflowY = 'hidden';
+     document.body.classList.toggle('hide-scroll');
   });
 
   $(".filter-area-header .btn-back-icon").on('click', function(event) { 
@@ -170,6 +174,7 @@ function InitStoresSlide(){
     $('.all-filters-area').removeClass('open');
      $(".body-backdrop").removeClass('open');
      document.body.style.overflowY = 'scroll';
+     document.body.classList.toggle('hide-scroll');
   });
 
   $(".open-sort-area").on('click', function(event) { 
@@ -177,6 +182,7 @@ function InitStoresSlide(){
     $('.sort-fixd-wrap').addClass('open');
      $(".body-backdrop").addClass('open');
      document.body.style.overflowY = 'hidden';
+     document.body.classList.toggle('hide-scroll');
   });
 
   $(".sort-fixd-wrap .btn-back-icon").on('click', function(event) { 
@@ -185,6 +191,7 @@ function InitStoresSlide(){
     $('.sort-fixd-wrap').removeClass('open');
      $(".body-backdrop").removeClass('open');
      document.body.style.overflowY = 'scroll';
+     document.body.classList.toggle('hide-scroll');
   });
 
 
@@ -325,6 +332,7 @@ function InitStoresSlide(){
       $('.sort-fixd-wrap').removeClass('open');
       $(".body-backdrop").removeClass('open');
       document.body.style.overflowY = 'scroll';
+      document.body.classList.toggle('hide-scroll');
       $(".all-sort-fixd-wrap .option").removeClass('selected focus');
       $(this).addClass('selected focus'); 
     });
