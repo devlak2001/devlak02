@@ -12,9 +12,17 @@
 .header-area .header-top .nav-toggle-btn {
     margin-left: 20px;
 }
-.side-menu-wrapper .sidenav-footer .btn{
-    height: 58px;
 }
+@media (max-width: 1200px){
+    .side-menu-wrapper .sidenav-footer .btn{
+        height: 54px;
+    }
+    .side-menu-wrapper .sidenav-footer{
+        padding: 12px 16px;
+    }
+    .side-menu-wrapper .sidenav-footer .btn span {
+        font-size: 12px;
+    }
 }
 
 :root {
