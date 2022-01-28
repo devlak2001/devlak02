@@ -324,6 +324,7 @@ function InitStoresSlide(){
       $('.sort-filter-show .current-text').text(getText); 
       $('.sort-fixd-wrap').removeClass('open');
       $(".body-backdrop").removeClass('open');
+      document.body.style.overflowY = 'scroll';
       $(".all-sort-fixd-wrap .option").removeClass('selected focus');
       $(this).addClass('selected focus'); 
     });
