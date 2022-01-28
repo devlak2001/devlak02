@@ -203,10 +203,9 @@ function InitStoresSlide(){
 
   $(".sort-fixd-wrap .btn-back-icon").on('click', function(event) { 
     event.preventDefault(); 
-    window.scrollTo(0, parseInt(document.body.style.top) * -1);
+   
     $('.sort-fixd-wrap').removeClass('open');
      $(".body-backdrop").removeClass('open');
-     unrefreezeBody();
   });
 
 
