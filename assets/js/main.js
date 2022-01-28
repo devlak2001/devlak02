@@ -4,16 +4,20 @@ const freezeBody = () => {
   const body = document.body;
   body.style.position = 'fixed';
   body.style.top = `-${scrollY}`;
+  body.style.overscrollBehavior = 'contain';
   // alert('freeze')
 };
 
 const unrefreezeBody = () => {
   // alert('unfreeze')
   const body = document.body;
-  const scrollY = body.style.top;
+  const scrollY = parseInt(body.style.top);
+  document.documentElement.style.setProperty('--scroll-y', `${scrollY}px`);
+  console.log(scrollY);
   body.style.position = '';
-  body.style.top = '';
-  window.scrollTo(0, parseInt(scrollY || '0') * -1);
+  body.style.top = '0px';
+  body.style.overscrollBehavior = 'initial';
+  window.scrollTo(0, scrollY * -1);
 }
 
 window.addEventListener('scroll', () => {
@@ -194,10 +198,12 @@ function InitStoresSlide(){
     $('.sort-fixd-wrap').addClass('open');
      $(".body-backdrop").addClass('open');
      freezeBody()
+     console.log(document.body.style.top);
   });
 
   $(".sort-fixd-wrap .btn-back-icon").on('click', function(event) { 
     event.preventDefault(); 
+    window.scrollTo(0, parseInt(document.body.style.top) * -1);
     $('.sort-fixd-wrap').removeClass('open');
      $(".body-backdrop").removeClass('open');
      unrefreezeBody();
